@@ -2,9 +2,12 @@ Given /^there is a location named "([^"]*)"$/ do |name|
   Factory(:location, :name => name)
 end
 
-Given /^I am on the (.+) (.+) page$/ do |language, location|
-  I18n.locale = language
-  visit('/'+language+'/'+location)
+Given /^I am on the (.+) site$/ do |language|
+   I18n.locale = language
+end
+
+Given /^I am on the locations page$/ do
+  visit(locations_path)
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
