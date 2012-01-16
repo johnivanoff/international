@@ -5,7 +5,8 @@ en:
 
     locations:
         index:
-            title_html: "Locations"
+            title_html:     "Locations"
+            destroy_html:   "Destroy"
         new:
             location_title: "New Location"
         form:

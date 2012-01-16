@@ -5,7 +5,8 @@ es:
     
     locations:
         index:
-            title_html: "Locaciones"
+            title_html:     "Locaciones"
+            destroy_html:   "Borrar"
         new:
             location_title: "Nueva Ubicación"
         form:

@@ -4,6 +4,7 @@
 <% @locations.each do |location| %>
   <li>
     <%= location.name %>
+	<%= link_to t('.destroy_html'), location, confirm: 'Are you sure?', method: :delete %>
   </li>
 <% end %>
 </ul>
