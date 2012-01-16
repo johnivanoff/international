@@ -26,3 +26,16 @@ Feature: Manage locations
 		 | language | name   | location   | create |
 		 | en		| Name   | location 1 | Create |
 		 | es		| Nombre | location 1 | crear ubicación |
+
+@wip
+	Scenario: Delete a location
+	  Given the following location records
+	    | name       |
+	    | location 1 |
+	    | location 2 |
+	    | location 3 |
+	    | location 4 |
+	  And I delete the 3rd location
+	  Then I should see "location 1"
+	  And I should see "location 2"
+	  And I should see "location 4"
