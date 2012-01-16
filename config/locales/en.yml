@@ -6,3 +6,8 @@ en:
     locations:
         index:
             title_html: "Locations"
+        new:
+            location_title: "New Location"
+        form:
+            name_html:      "Name"
+            create_html:    "Create Location"

@@ -1,8 +1,7 @@
 International::Application.routes.draw do
   
   scope '(:locale)' do
-    match 'locations/' => 'locations#index', :as => :locations
-    match 'locations/new' => 'locations#new', :as => :new_location
+    resources :locations
   end
   
 end
