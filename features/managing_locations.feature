@@ -14,3 +14,10 @@ Feature: Manage locations
 		 | location   | language | title      |
 		 | location 1 | en       | Locations  |
 		 | location 2 | es       | Locaciones |
+
+@wip
+	Scenario: Create a new location
+		Given I am on new location page
+		And I fill in "Name" with "location 1"
+		And press "Create"
+		Then I should see "location 1"
