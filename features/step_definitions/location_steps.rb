@@ -30,3 +30,7 @@ end
 Given /^press "([^"]*)"$/ do |button|
   click_button(button)
 end
+
+Given /^there is a location named "([^"]*)"$/ do |name|
+  Factory(:location, :name => name)
+end
