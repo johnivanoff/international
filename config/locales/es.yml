@@ -3,10 +3,14 @@
 
 es:
 
+    activerecord:
+        models:
+            location: "Location"
+
     helpers:
         submit:
             create: "crear a %{model}"
-            update: "Confirm changes to %{model}"
+            update: "Editar %{model}"
 
     locations:
         index:
