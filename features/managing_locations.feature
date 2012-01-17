@@ -23,8 +23,8 @@ Feature: Manage locations
 		Then I should see "<location>"
 		
 		Examples:
-		 | language | name   | location   | button          |
-		 | en       | Name   | location 1 | Create          |
+		 | language | name   | location   | button |
+		 | en       | Name   | location 1 | Create |
 		 | es       | Nombre | location 1 | crear  |
 
 	Scenario: Delete a location
