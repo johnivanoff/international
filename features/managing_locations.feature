@@ -19,13 +19,13 @@ Feature: Manage locations
 		Given I am on the <language> site
 		And I am on new location page
 		And I fill in "<name>" with "<location>"
-		And press "<create>"
+		And press "<button>"
 		Then I should see "<location>"
 		
 		Examples:
-		 | language | name   | location   | create |
-		 | en		| Name   | location 1 | Create |
-		 | es		| Nombre | location 1 | crear ubicación |
+		 | language | name   | location   | button          |
+		 | en       | Name   | location 1 | Create          |
+		 | es       | Nombre | location 1 | crear ubicación |
 
 	Scenario: Delete a location
 		Given the following location records
