@@ -25,7 +25,7 @@ Feature: Manage locations
 		Examples:
 		 | language | name   | location   | button          |
 		 | en       | Name   | location 1 | Create          |
-		 | es       | Nombre | location 1 | crear ubicación |
+		 | es       | Nombre | location 1 | crear  |
 
 	Scenario: Delete a location
 		Given the following location records
@@ -40,7 +40,6 @@ Feature: Manage locations
 	  	And I should see "location 2"
 	  	And I should see "location 4"
 
-@wip
 	Scenario: Edit a location
 		Given there is a location named "location 1"
   		And I am on the en site

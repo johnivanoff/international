@@ -6,7 +6,7 @@ en:
     helpers:
         submit:
             create: "Create %{model}"
-            update: "Confirm changes to %{model}"
+            update: "Update %{model}"
 
     locations:
         index:
