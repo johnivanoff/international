@@ -6,9 +6,12 @@ es:
     locations:
         index:
             title_html:     "Locaciones"
+            edit_html:      "Editar"
             destroy_html:   "Borrar"
         new:
             location_title: "Nueva Ubicación"
+        edit:
+            location_title: "Editar Location"
         form:
             name_html:      "Nombre"
             create_html:    "crear ubicación"

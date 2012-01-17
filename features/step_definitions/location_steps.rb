@@ -44,3 +44,12 @@ When /^I delete the (\d+)(?:st|nd|rd|th) (.+)$/ do |pos, model|
     click_link "Destroy"
   end
 end
+
+When /^I change the location name to "([^"]*)"$/ do |name|
+  visit(locations_path)
+  within("ul li:nth-child(1)") do
+    click_link "Edit"
+  end
+  fill_in('Name', :with => name)
+  click_button('Update')
+end

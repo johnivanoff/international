@@ -54,16 +54,37 @@ class LocationsController < ApplicationController
     end
   end
 
-    # DELETE /locations/1
-    # DELETE /locations/1.json
-    def destroy
-      @location = Location.find(params[:id])
-      @location.destroy
 
-      respond_to do |format|
-        format.html { redirect_to locations_url }
+  # GET /locations/1/edit
+  def edit
+    @location = Location.find(params[:id])
+  end
+
+  # PUT /locations/1
+  # PUT /locations/1.json
+  def update
+    @location = Location.find(params[:id])
+
+    respond_to do |format|
+      if @location.update_attributes(params[:location])
+        format.html { redirect_to @location, notice: 'Location was successfully updated.' }
         format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @location.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  # DELETE /locations/1
+  # DELETE /locations/1.json
+  def destroy
+    @location = Location.find(params[:id])
+    @location.destroy
+      respond_to do |format|
+      format.html { redirect_to locations_url }
+      format.json { head :ok }
+    end
+  end
   
 end

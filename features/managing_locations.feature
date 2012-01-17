@@ -39,3 +39,10 @@ Feature: Manage locations
 	  	Then I should see "location 1"
 	  	And I should see "location 2"
 	  	And I should see "location 4"
+
+@wip
+	Scenario: Edit a location
+		Given there is a location named "location 1"
+  		And I am on the en site
+		When I change the location name to "location has changed"
+		Then I should see "location has changed"
