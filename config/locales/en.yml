@@ -3,6 +3,11 @@
 
 en:
 
+    helpers:
+        submit:
+            create: "Create %{model}"
+            update: "Confirm changes to %{model}"
+
     locations:
         index:
             title_html:     "Locations"
@@ -14,4 +19,3 @@ en:
             location_title: "Edit Location"
         form:
             name_html:      "Name"
-            create_html:    "Create Location"

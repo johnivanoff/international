@@ -2,7 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-    
+
+    helpers:
+        submit:
+            create: "crear a %{model}"
+            update: "Confirm changes to %{model}"
+
     locations:
         index:
             title_html:     "Locaciones"
@@ -14,4 +19,4 @@ es:
             location_title: "Editar Location"
         form:
             name_html:      "Nombre"
-            create_html:    "crear ubicación"
+#            create_html:    "crear ubicación"
