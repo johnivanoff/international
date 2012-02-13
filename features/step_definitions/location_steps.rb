@@ -37,11 +37,11 @@ Given /^the following (.+) records?$/ do |factory, table|
   end
 end
 
-When /^I delete the (\d+)(?:st|nd|rd|th) (.+)$/ do |pos, model|
+When /^I (.+) the (\d+)(?:st|nd|rd|th) (.+)$/ do |action, pos, model|
   tempPath = '/' + model + 's'
   visit tempPath # assets_path
   within("ul li:nth-child(#{pos.to_i})") do
-    click_link "Destroy"
+    click_link action
   end
 end
 

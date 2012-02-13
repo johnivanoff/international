@@ -26,19 +26,25 @@ Feature: Manage locations
 		 | language | name   | location   | button |
 		 | en       | Name   | location 1 | Create |
 		 | es       | Nombre | location 1 | crear  |
-
-	Scenario: Delete a location
+		
+	Scenario Outline: Delete a location
 		Given the following location records
 	    	| name       |
 	    	| location 1 |
 	    	| location 2 |
 	    	| location 3 |
 	    	| location 4 |
-	  	And I am on the en site
-	  	And I delete the 3rd location
+	  	And I am on the <language> site
+	  	And I <action> the 3rd location
 	  	Then I should see "location 1"
 	  	And I should see "location 2"
 	  	And I should see "location 4"
+		
+		Examples:
+		 | language | action  |
+		 | en       | Destroy |
+		 | es       | Borrar  |
+
 
 	Scenario: Edit a location
 		Given there is a location named "location 1"
